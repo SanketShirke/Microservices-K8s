@@ -6,14 +6,14 @@ metadata:
     app: mongo
 spec:
   selector: 
-     matchLabeles:
+     matchLables:
       app: mongo
   template: 
     metadata:
-      lables:
+      labels:
         app: mongo
     spec:
-      conatiners:
+      containers:
         - name: mongo
           image: mongo
           ports:
