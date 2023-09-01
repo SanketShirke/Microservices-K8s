@@ -1,0 +1,14 @@
+appVersion: v1
+kind: Service
+metadata: 
+  name: python-svc
+
+spec:
+  selector:
+    app: python-svc
+  ports:
+    - ports: 80
+      targetPort: 5000
+      nodePort: 3007
+  type: NodePort      
+
