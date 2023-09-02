@@ -1,14 +1,14 @@
 apiVersion: apps/v1
 kind: Deployment
-metadata: 
+metadata:
   name: mongo
   labels:
-    app: mongo
-spec:
-  selector: 
-     matchLabels:
       app: mongo
-  template: 
+spec:
+  selector:
+    matchLabels:
+      app: mongo
+  template:
     metadata:
       labels:
         app: mongo
