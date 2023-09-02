@@ -2,14 +2,13 @@ apiVersion: v1
 kind: Service
 metadata: 
   labels:
-   app: mongo-svc 
-  name: mongo-svc
-
+   app: mongo
+  name: mongo
 spec:
   ports:  
     - port: 27017
       targetPort: 27017
   type: NodePort
   selector:
-    app: mongo-svc  
+    app: mongo
 
