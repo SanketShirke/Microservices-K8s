@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: taskmaster
+  name: python
   labels:
-    app: taskmaster
+    app: python
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: taskmaster
+      app: python
   template:
     metadata:
       labels:
-        app: taskmaster
+        app: python
     spec:
       containers:
-        - name: taskmaster
+        - name: python
           image: sanketshirke/python-app:latest
           ports:  
             - containerPort: 5000
