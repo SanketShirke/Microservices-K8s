@@ -1,26 +1,22 @@
 apiVersion: apps/v1
-kind: Deployment 
-metadata: 
-  name: python
+kind: Deployment
+metadata:
+  name: taskmaster
   labels:
-    app: python
-
-spec: 
+    app: taskmaster
+spec:
   replicas: 1
   selector:
     matchLabels:
-      app: python
-  template: 
+      app: taskmaster
+  template:
     metadata:
       labels:
-        app: python
-
-    spec: 
+        app: taskmaster
+    spec:
       containers:
-        - name: python
+        - name: taskmaster
           image: sanketshirke/python-app:latest
-          ports:
+          ports:  
             - containerPort: 5000
           imagePullPolicy: Always
-
-      
